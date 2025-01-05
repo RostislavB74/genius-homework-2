@@ -54,7 +54,10 @@ body {
   font-weight: 400;
   line-height: 1.5;
   margin-top: 0;
+
+  /* background-size: 100%; */
 }
+
 .visually-hidden {
   position: absolute;
   left: -10000px;
@@ -118,7 +121,6 @@ ul {
 .link {
   color: var(--color-primary-3);
   text-decoration: none;
-
 }
 .link:hover {
   font-weight: 700;
@@ -126,12 +128,14 @@ ul {
 }
 /*Header*/
 .header {
+  position: absolute;
+  z-index: 1;
   width: 100%;
   max-width: 1440px;
   display: flex;
   justify-content: center;
-  /* background-color: lightgray; */
   margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.25)
 }
 .header-container {
   display: flex;
@@ -156,20 +160,29 @@ ul {
 }
 /* hero section*/
 .hero-section {
-  /* background-color: lightblue; */
+  width: 1510px;
+  height: 681px;
   margin-top: 0;
   margin-bottom: 176px;
   background-image: url('../images/face_massage.jpg');
   background-repeat: no-repeat;
-  background-position: center top;
   background-size: 100%;
+}
+.hero-container {
+  position: relative;
+  top:106px;
+  margin-left: 106px;
+  
+  width: 100%;
+  max-width: 529px;
   
 }
 .hero-section-logo {
+  
   /* background-color: rgb(161, 167, 167); */
   width: 530px;
   height: 265px;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 .hero-communication {
   /* background-color: #9cff2b; */
@@ -177,6 +190,7 @@ ul {
   width: 240px;
   height: 100px;
   gap: 14px;
+  /* margin-top: 106px; */
 }
 .hero-title {
   color: var(--color-primary-2);
@@ -185,6 +199,7 @@ ul {
   font-weight: 700;
   line-height: 0.8;
   text-transform: capitalize;
+  /* margin-top: 106px; */
 }
 
 /* about us section*/
@@ -236,19 +251,19 @@ ul {
   cursor: pointer;
   flex-shrink: 0;
 }
-.picture{
+.picture {
   border-radius: 50%;
 }
 .gallery.second {
   position: absolute;
   bottom: 0;
   right: 0;
-  
 }
 .limited {
   max-width: 638px;
 }
 /*advantages*/
+
 .advantages-section {
   width: 100%;
   max-width: 1060px;
@@ -257,13 +272,12 @@ ul {
   line-height: 1.3;
   margin-bottom: 96px;
 }
+
+
 .advantages-title {
   width: 100%;
   max-width: 532px;
   margin-bottom: 48px;
-  /* text-align: center; */
-
-  
 }
 .advantages-list {
   display: flex;
@@ -278,7 +292,6 @@ ul {
   height: 181px;
   background-color: var(--color-primary-1);
   border-radius: 32px;
-
 }
 .carousel-button {
   display: flex;
@@ -329,7 +342,6 @@ ul {
 .contacts-section {
   padding-bottom: 96px;
   gap: 32px;
-
 }
 .contact-title {
   margin-bottom: 16px;
@@ -340,24 +352,26 @@ ul {
   border: none;
   border-radius: 32px;
 }
-.forma{
+.forma {
   width: 423px;
   height: 481px;
   background-color: var(--color-secondary-3);
   margin: 0;
   text-align: center;
   border-radius: 32px;
-
-}
-.forma-title{
   color: var(--color-primary-1);
-  
+}
+.forma.forma-title {
+  /* color: var(--color-primary-1); */
   width: 274px;
 }
-.accent-forma{
+.forma-title {
+  margin-bottom: 32px;
+}
+.accent-forma {
   color: var(--color-primary-2);
 }
-.confidence{
+.confidence {
   width: 100%;
   max-width: 213px;
   font-size: 12px;
@@ -368,7 +382,7 @@ ul {
   width: 100%;
   max-width: 1440px;
   background-color: var(--color-primary-3);
-  /* font-style: normal; */
+  font-style: normal;
   padding: 56px;
 }
 .footer-container {
@@ -376,20 +390,17 @@ ul {
   justify-content: center;
   /* flex-grow: 1; */
   color: var(--color-primary-1);
-  
 }
 .footer-nav,
 .footer-address {
   display: flex;
   flex-basis: 50%;
   gap: 20px;
-  
 }
 .footer-logo,
 .footer-menu {
   margin: 0;
   flex-grow: 1;
-  
 }
 .footer-link {
   color: var(--color-primary-1);
@@ -408,6 +419,8 @@ ul {
   font-style: normal;
   gap: 186px;
 }
+.social-network{
+  display: flex;}
 .social-section {
   display: flex;
   gap: 24px;
