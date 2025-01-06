@@ -128,8 +128,10 @@ ul {
 }
 /*Header*/
 .header {
-  position: absolute;
-  z-index: 1;
+  /* position: absolute;
+  z-index: 1; */
+  /* top:0; */
+  left: 240px;
   width: 100%;
   max-width: 1440px;
   display: flex;
@@ -329,6 +331,12 @@ ul {
   display: flex;
   gap: 32px;
   align-items: center;
+}
+.picture-procedure{
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 120px;
+  border-bottom-left-radius: 120px;
 }
 
 /*contacts*/
