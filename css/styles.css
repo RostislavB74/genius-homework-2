@@ -83,6 +83,9 @@ p {
   margin: 0 auto;
   padding: 0;
 }
+/* .section {
+  padding: 96px 0;
+} */
 .section-title {
   font-family: Play, sans-serif;
   font-size: 64px;
@@ -128,16 +131,16 @@ ul {
 }
 /*Header*/
 .header {
-  /* position: absolute;
-  z-index: 1; */
-  /* top:0; */
-  left: 240px;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 1440px;
+  text-align: center;
+  /* max-width: 1440px; */
   display: flex;
   justify-content: center;
-  margin-bottom: 16px;
-  background-color: rgba(255, 255, 255, 0.25)
+  /* margin-bottom: 16px; */
+  background-color: rgba(255, 255, 255, 0.25);
 }
 .header-container {
   display: flex;
@@ -164,23 +167,29 @@ ul {
 .hero-section {
   width: 1510px;
   height: 681px;
+  padding-top: 106px;
   margin-top: 0;
   margin-bottom: 176px;
-  background-image: url('../images/face_massage.jpg');
+  background-image: linear-gradient(
+      89.38deg,
+      #ffffff 30.62%,
+      rgba(255, 255, 255, 0.850898) 41.31%,
+      rgba(255, 255, 255, 0.193204) 58.65%,
+      rgba(255, 255, 255, 0) 72.78%
+    ),
+    url('../images/face_massage.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
 }
 .hero-container {
-  position: relative;
-  top:106px;
+  /* position: relative; */
+  /* top:106px; */
   margin-left: 106px;
-  
+
   width: 100%;
   max-width: 529px;
-  
 }
 .hero-section-logo {
-  
   /* background-color: rgb(161, 167, 167); */
   width: 530px;
   height: 265px;
@@ -273,8 +282,13 @@ ul {
   text-align: center;
   line-height: 1.3;
   margin-bottom: 96px;
+  background: linear-gradient(
+    38.2deg,
+    rgba(43, 127, 255, 0.2) 39.74%,
+    rgba(43, 127, 255, 0) 54.16%,
+    rgba(43, 127, 255, 0) 66.66%
+  );
 }
-
 
 .advantages-title {
   width: 100%;
@@ -295,6 +309,7 @@ ul {
   background-color: var(--color-primary-1);
   border-radius: 32px;
 }
+/* Procedure section*/
 .carousel-button {
   display: flex;
   align-items: center;
@@ -314,31 +329,67 @@ ul {
   fill: var(--color-primary-1);
   border: none;
 }
+.carousel-button.next {
+  transform: rotate(180deg);
+}
 
 .procedure-section {
   width: 100%;
-  max-width: 1216px;
+  /* max-width: 1216px; */
   text-align: center;
   line-height: 1.3;
   margin-bottom: 96px;
 }
 .our-procedure-list {
   display: flex;
+  width: 100%;
   gap: 16px;
   flex-wrap: wrap;
 }
 .procedure-container {
   display: flex;
+  /* width: 100%; */
   gap: 32px;
   align-items: center;
 }
-.picture-procedure{
+
+.procedure-card {
+  height: 456px;
+  border: #011f4a 1px solid;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 120px;
+  border-bottom-left-radius: 120px;
+  background-image: linear-gradient(
+    180.05deg,
+    rgba(1, 28, 68, 0) 48.53%,
+    rgba(1, 28, 68, 0.725825) 84.61%,
+    #011c44 101.39%
+  );
+  z-index: 1;
+  transition: transform 0.3s;
+}
+.picture-procedure {
+  /* height: 456px; */
   border-top-left-radius: 4px;
   border-bottom-right-radius: 4px;
   border-top-right-radius: 120px;
   border-bottom-left-radius: 120px;
 }
+.procedures-title {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 
+  color: rgba(255, 255, 255, 1);
+}
+.procedure-item {
+  flex-basis: calc((100% - 32px) / 3);
+  flex-wrap: wrap;
+}
 /*contacts*/
 .contacts-container {
   display: flex;
@@ -428,8 +479,9 @@ ul {
   font-style: normal;
   gap: 186px;
 }
-.social-network{
-  display: flex;}
+.social-network {
+  display: flex;
+}
 .social-section {
   display: flex;
   gap: 24px;
